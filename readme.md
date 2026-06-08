@@ -40,7 +40,7 @@ my-extensions/
 
 ```cds
 extend service DemoService with {
-  entity Foo {
+  entity NewFoo {
     key ID : UUID;
     name   : String(50);
   };
@@ -50,7 +50,7 @@ extend service DemoService with {
 
 | Addition | Notes |
 |---|---|
-| `entity Foo { ... }` | Virtual entity — must implement CRUD manually in the handler |
+| `entity NewFoo { ... }` | Virtual entity — must implement CRUD manually in the handler |
 | `entity Foo as projection on db.Foo` | Projection entity — CAP handles DB read/write automatically |
 | `function / action` | Unbound — mounted at service level |
 
