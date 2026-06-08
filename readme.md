@@ -118,8 +118,8 @@ GET http://localhost:4004/odata/v4/demo/getRatings1()
 GET http://localhost:4004/odata/v4/demo/Orders(<ID>)/getRatings2()
 
 ### Virtual entity
-GET http://localhost:4004/odata/v4/demo/Foo
-POST http://localhost:4004/odata/v4/demo/Foo
+GET http://localhost:4004/odata/v4/demo/NewFoo
+POST http://localhost:4004/odata/v4/demo/NewFoo
 Content-Type: application/json
 
 { "name": "test" }
