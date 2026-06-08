@@ -1,0 +1,71 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Orders
+# @name Orders_GET
+GET {{server}}/odata/v4/demo/Orders
+Authorization: Basic {{username}}:{{password}}
+
+
+### Orders
+# @name Orders_POST
+POST {{server}}/odata/v4/demo/Orders
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  # "ID": "4313605e-6d32-4aa5-9b89-cba801b969fc",
+  "amount": 51244119.06,
+  "price": 12345.6
+}
+
+### bound function
+# @name Order_getRatings2_GET
+GET {{server}}/odata/v4/demo/Orders(ID=c572c180-b26d-4750-8150-dca50ae6f740)/getRatings2()
+Authorization: Basic {{username}}:{{password}}
+
+
+### unbound function
+# @name getRatings1_GET
+GET {{server}}/odata/v4/demo/getRatings1()
+Authorization: Basic {{username}}:{{password}}
+
+
+### Orders
+# @name Orders_PATCH
+PATCH {{server}}/odata/v4/demo/Orders/4313605e-6d32-4aa5-9b89-cba801b969fc
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  # "ID": "4313605e-6d32-4aa5-9b89-cba801b969fc",
+  "amount": 44119.06,
+  "price": 2345.6
+}
+
+
+### Orders
+# @name Orders_DELETE
+DELETE {{server}}/odata/v4/demo/Orders/4313605e-6d32-4aa5-9b89-cba801b969fc
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### unbound function
+# @name NewFoo
+GET {{server}}/odata/v4/demo/NewFoo
+Authorization: Basic {{username}}:{{password}}
+
+
+### NewFoo
+# @name NewFoo_POST
+POST {{server}}/odata/v4/demo/NewFoo
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "002",
+  "name": "NewFooName"
+}
