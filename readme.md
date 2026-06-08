@@ -11,7 +11,6 @@ This project explores CAP's extension mechanisms, including:
 - `extend service` — adding new entities, unbound functions/actions to an existing service
 - `extend entity ... with actions` — adding bound functions/actions to an existing entity
 - Virtual entities (no DB backing) vs. projection entities
-- Custom-defined events: declaration, emitting, and subscribing
 
 ---
 
